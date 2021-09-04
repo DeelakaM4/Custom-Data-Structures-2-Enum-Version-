@@ -387,13 +387,17 @@ public class Dictionary
                     System.out.println(this.keyList.get(i) + " : " + this.characterValueList.get(i));
                 }
             }
-            else
+            else if (this.TYPE == DataType.STRING)
             {
                 for (int i = 0; i < this.keyList.size(); i++)
                 {
                     System.out.println(this.keyList.get(i) + " : " + this.stringValueList.get(i));
                 }
             }
+			else
+			{
+				System.out.println("");
+			}
         }
         else
         {
@@ -422,11 +426,16 @@ public class Dictionary
                 this.characterValueList.remove(index);
                 this.keyList.remove(index);
             }
-            else
+            else if (this.TYPE == DataType.STRING)
             {
                 this.stringValueList.remove(index);
                 this.keyList.remove(index);
             }
+			else
+			{
+				System.out.println("Java Dictionary Class Object - Dictionary method 'delete()' is incompatible with " + this.TYPE + " type");
+                System.exit(1);
+			}
         }
         else
         {
@@ -452,11 +461,16 @@ public class Dictionary
             this.characterValueList.clear();
             this.keyList.clear();
         }
-        else
+        else if (this.TYPE == DataType.STRING)
         {
             this.stringValueList.clear();
             this.keyList.clear();
         }
+		else
+		{
+			System.out.println("Java Dictionary Class Object - Dictionary method 'deleteAll()' is incompatible with " + this.TYPE + " type");
+			System.exit(1);
+		}
     }
 
     public int getSize()
