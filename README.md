@@ -8,3 +8,4 @@ Feel free to use any file for programming use.
 The MixedDictionary class inherits from the Dictionary class and also uses the AnyType class and DataType enum so do not exclude them when using.
 The MixedList class uses the AnyType class and DataType enum so do not exclude them while using.
 The MixedArray class uses the AnyType class and DataType enum so do not exclude them while using.
+The MixedNumberLineList class and the NumberLineList class uses the AnyType class and DataType enum so do not exclude them while using.
